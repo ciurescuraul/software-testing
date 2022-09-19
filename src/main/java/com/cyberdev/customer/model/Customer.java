@@ -1,4 +1,4 @@
-package com.cyberdev.customer.customer;
+package com.cyberdev.customer.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

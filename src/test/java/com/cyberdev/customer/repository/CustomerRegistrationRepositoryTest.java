@@ -1,6 +1,6 @@
 package com.cyberdev.customer.repository;
 
-import com.cyberdev.customer.customer.Customer;
+import com.cyberdev.customer.model.Customer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;

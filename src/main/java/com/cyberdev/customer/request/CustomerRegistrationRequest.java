@@ -1,6 +1,6 @@
-package com.cyberdev.customer.customer.request;
+package com.cyberdev.customer.request;
 
-import com.cyberdev.customer.customer.Customer;
+import com.cyberdev.customer.model.Customer;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CustomerRegistrationRequest {

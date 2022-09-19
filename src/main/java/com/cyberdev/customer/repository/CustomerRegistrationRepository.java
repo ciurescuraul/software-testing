@@ -1,6 +1,6 @@
 package com.cyberdev.customer.repository;
 
-import com.cyberdev.customer.customer.Customer;
+import com.cyberdev.customer.model.Customer;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

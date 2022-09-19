@@ -1,7 +1,7 @@
 package com.cyberdev.customer.service;
 
-import com.cyberdev.customer.customer.Customer;
-import com.cyberdev.customer.customer.request.CustomerRegistrationRequest;
+import com.cyberdev.customer.model.Customer;
+import com.cyberdev.customer.request.CustomerRegistrationRequest;
 import com.cyberdev.customer.exception.CustomerPhoneNumberTakenException;
 import com.cyberdev.customer.repository.CustomerRegistrationRepository;
 import org.junit.jupiter.api.BeforeEach;
