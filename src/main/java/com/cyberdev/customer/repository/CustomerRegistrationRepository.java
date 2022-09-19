@@ -1,6 +1,6 @@
-package com.amigoscode.testing.repository;
+package com.cyberdev.customer.repository;
 
-import com.amigoscode.testing.customer.Customer;
+import com.cyberdev.customer.customer.Customer;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

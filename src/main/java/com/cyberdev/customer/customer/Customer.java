@@ -1,4 +1,4 @@
-package com.amigoscode.testing.customer;
+package com.cyberdev.customer.customer;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

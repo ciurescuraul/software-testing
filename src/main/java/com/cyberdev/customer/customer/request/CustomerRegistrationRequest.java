@@ -1,6 +1,6 @@
-package com.amigoscode.testing.customer.request;
+package com.cyberdev.customer.customer.request;
 
-import com.amigoscode.testing.customer.Customer;
+import com.cyberdev.customer.customer.Customer;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CustomerRegistrationRequest {

@@ -1,6 +1,6 @@
-package com.amigoscode.testing.controller;
+package com.cyberdev.customer.controller;
 
-import com.amigoscode.testing.customer.request.CustomerRegistrationRequest;
+import com.cyberdev.customer.customer.request.CustomerRegistrationRequest;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

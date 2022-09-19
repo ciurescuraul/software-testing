@@ -1,6 +1,6 @@
-package com.amigoscode.testing.repository;
+package com.cyberdev.customer.repository;
 
-import com.amigoscode.testing.customer.Customer;
+import com.cyberdev.customer.customer.Customer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;

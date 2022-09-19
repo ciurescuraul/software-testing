@@ -1,9 +1,9 @@
-package com.amigoscode.testing.service;
+package com.cyberdev.customer.service;
 
-import com.amigoscode.testing.customer.Customer;
-import com.amigoscode.testing.customer.request.CustomerRegistrationRequest;
-import com.amigoscode.testing.exception.PhoneNumberTakenException;
-import com.amigoscode.testing.repository.CustomerRegistrationRepository;
+import com.cyberdev.customer.customer.Customer;
+import com.cyberdev.customer.customer.request.CustomerRegistrationRequest;
+import com.cyberdev.customer.exception.CustomerPhoneNumberTakenException;
+import com.cyberdev.customer.repository.CustomerRegistrationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +30,7 @@ public class CustomerRegistrationService {
             if (customer.getName().equals(request.getCustomer().getName())) {
                 return;
             }
-            throw new PhoneNumberTakenException(String.format("phone number [%s] is taken", phoneNumber));
+            throw new CustomerPhoneNumberTakenException(String.format("phone number [%s] is taken", phoneNumber));
         }
 
         if (request.getCustomer().getId() == null) {

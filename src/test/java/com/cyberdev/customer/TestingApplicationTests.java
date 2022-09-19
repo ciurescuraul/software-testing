@@ -1,4 +1,4 @@
-package com.amigoscode.testing;
+package com.cyberdev.customer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
