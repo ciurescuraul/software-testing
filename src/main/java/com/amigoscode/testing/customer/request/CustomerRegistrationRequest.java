@@ -1,24 +1,24 @@
 package com.amigoscode.testing.customer.request;
 
-import com.amigoscode.testing.customer.CustomerDAO;
+import com.amigoscode.testing.customer.Customer;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CustomerRegistrationRequest {
 
-    private final CustomerDAO customerDAO;
+    private final Customer customer;
 
-    public CustomerRegistrationRequest(@JsonProperty(value = "customerDAO") CustomerDAO customerDAO) {
-        this.customerDAO = customerDAO;
+    public CustomerRegistrationRequest(@JsonProperty(value = "customer") Customer customer) {
+        this.customer = customer;
     }
 
-    public CustomerDAO getCustomer() {
-        return customerDAO;
+    public Customer getCustomer() {
+        return customer;
     }
 
     @Override
     public String toString() {
         return "CustomerRegistrationRequest{" +
-                "customerDAO=" + customerDAO +
+                "customer=" + customer +
                 '}';
     }
 }

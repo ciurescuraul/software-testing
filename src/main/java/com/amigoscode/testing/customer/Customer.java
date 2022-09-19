@@ -1,9 +1,14 @@
 package com.amigoscode.testing.customer;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
-public class CustomerDAO {
+@Entity
+public class Customer {
+    @Id
     private UUID id;
 
     @NotBlank
@@ -12,7 +17,9 @@ public class CustomerDAO {
     @NotBlank
     private String phoneNumber;
 
-    public CustomerDAO(UUID id, String name, String phoneNumber) {
+    public Customer() {}
+
+    public Customer(UUID id, String name, String phoneNumber) {
         this.id = id;
         this.name = name;
         this.phoneNumber = phoneNumber;
