@@ -2,7 +2,6 @@ package com.amigoscode.testing.customer;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
@@ -17,7 +16,8 @@ public class Customer {
     @NotBlank
     private String phoneNumber;
 
-    public Customer() {}
+    public Customer() {
+    }
 
     public Customer(UUID id, String name, String phoneNumber) {
         this.id = id;
