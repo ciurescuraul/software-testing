@@ -33,7 +33,9 @@ class CustomerRegistrationServiceTest {
 
     private Customer customer;
     private Customer customer2;
+    private Customer customer3;
     private CustomerRegistrationRequest request;
+    private CustomerRegistrationRequest request2;
 
     @BeforeEach
     void setUp() {
@@ -41,7 +43,9 @@ class CustomerRegistrationServiceTest {
         underTest = new CustomerRegistrationService(customerRepository);
         customer = new Customer(UUID.randomUUID(), "Maria", "0123456789");
         customer2 = new Customer(UUID.randomUUID(), "John", "0123456789");
+        customer3 = new Customer(null, "Raul", "0123456789");
         request = new CustomerRegistrationRequest(customer);
+        request2 = new CustomerRegistrationRequest(customer3);
     }
 
     @Test
@@ -57,6 +61,22 @@ class CustomerRegistrationServiceTest {
         Customer customerArgumentCaptorValue = customerArgumentCaptor.getValue();
 
         assertThat(customerArgumentCaptorValue).isEqualTo(customer);
+    }
+
+    @Test
+    void shouldRegisterNewCustomerWhenIdIsNull() {
+        // no Customer returned
+        given(customerRepository.selectCustomerByPhoneNumber(customer3.getPhoneNumber())).willReturn(Optional.empty());
+
+        // When
+        underTest.registerNewCustomer(request2);
+
+        // Then
+        then(customerRepository).should().save(customerArgumentCaptor.capture());
+        Customer customerArgumentCaptorValue = customerArgumentCaptor.getValue();
+
+        assertThat(customerArgumentCaptorValue).isEqualToIgnoringGivenFields(customer3, "id");
+        assertThat(customerArgumentCaptorValue.getId()).isNotNull();
     }
 
     @Test
